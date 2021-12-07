@@ -39,16 +39,6 @@ var config = {
             position: [48, 116],
             text: "商品3",
         },
-        {
-            position: [70, 148],
-            text: "請求者　太郎",
-            font: {
-                name: 'Roboto-Regular', 
-                variant: 'normal',
-                color: [0, 255, 0],
-                size: 20
-            },
-        },
     ]
 }
 
