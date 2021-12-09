@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>CSS - 帳票サンプル</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+  <style>
+    /* Container holding the image and the text */
+    .container {
+      position: relative;
+      text-align: center;
+      color: red;
+			width: 297mm;
+			height: 210mm;
+    }
+
+    /* Bottom left text */
+    .bottom-left {
+      position: absolute;
+      bottom: 8px;
+      left: 16px;
+    }
+
+    /* Top left text */
+    .top-left {
+      position: absolute;
+      top: 8px;
+      left: 16px;
+    }
+
+    /* Top right text */
+    .top-right {
+      position: absolute;
+      top: 8px;
+      right: 16px;
+    }
+
+    /* Bottom right text */
+    .bottom-right {
+      position: absolute;
+      bottom: 8px;
+      right: 16px;
+    }
+
+    /* Centered text */
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+
+	<style>
+	footer {
+		font-size: 9px;
+		color: #f00;
+		text-align: center;
+	}
+
+	@page {
+    size: landscape
+		/* size: A4; */
+		/* margin: 11mm 17mm 17mm 17mm; */
+	}
+
+	@media print {
+    .pagebreak { page-break-before: always; } /* page-break-after works, as well */
+
+		footer {
+			position: fixed;
+			bottom: 0;
+		}
+
+		/* .content-block, p {
+			page-break-inside: avoid;
+		} */
+
+		/* html, body {
+			width: 297mm;
+			height: 210mm;
+		} */
+	}
+	</style>
+</head>
+
+<body>
+    <div class="container">
+      <img src="https://i.imgur.com/R09pXIX.png" alt="" style="width:100%;">
+      <div class="bottom-left">Bottom Left</div>
+      <div class="top-left">Top Left</div>
+      <div class="top-right">Top Right</div>
+      <div class="bottom-right">Bottom Right</div>
+      <div class="centered">Centered</div>
+
+      <div style="
+        position: absolute;
+        top: 38mm;
+        left: 36mm;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 10mm;
+        color: red;
+        ">たなか　たろう</div>
+      <div style="
+        position: absolute;
+        top: 80mm;
+        left: 36mm;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 8mm;
+        color: blue;
+        ">商品１</div>
+      <div style="
+        position: absolute;
+        top: 95mm;
+        left: 36mm;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 8mm;
+        color: blue;
+        ">商品２</div>
+      <div style="
+        position: absolute;
+        top: 110mm;
+        left: 36mm;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 8mm;
+        color: blue;
+        ">商品３</div>
+    </div>
+
+    <div class="pagebreak"> </div>
+
+
+    <div class="container">
+      <img src="https://i.imgur.com/R09pXIX.png" alt="" style="width:100%;">
+      <div class="bottom-left">Bottom Left</div>
+      <div class="top-left">Top Left</div>
+      <div class="top-right">Top Right</div>
+      <div class="bottom-right">Bottom Right</div>
+      <div class="centered">Centered</div>
+
+      <div style="
+        position: absolute;
+        top: 38mm;
+        left: 36mm;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 10mm;
+        color: red;
+        ">たなか　たろう</div>
+      <div style="
+        position: absolute;
+        top: 80mm;
+        left: 36mm;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 8mm;
+        color: blue;
+        ">商品１</div>
+      <div style="
+        position: absolute;
+        top: 95mm;
+        left: 36mm;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 8mm;
+        color: blue;
+        ">商品２</div>
+      <div style="
+        position: absolute;
+        top: 110mm;
+        left: 36mm;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 8mm;
+        color: blue;
+        ">商品３</div>
+    </div>
+
+    <footer>
+      フーターです。プリントする際には、全ての画面に表示されます
+    </footer>
+</body>
+
+</html>

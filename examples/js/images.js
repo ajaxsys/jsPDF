@@ -69,7 +69,6 @@ function render(doc, config) {
     console.log("Supported fonts:", doc.getFontList());
 
     config.layers.forEach(el => {
-        debugger
         if (el.text) {
             el.font = Object.assign(
                 {}, 
